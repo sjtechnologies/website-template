@@ -497,6 +497,7 @@ nav.main-navigation ul.main_menu_content li.single_nav_item ul.flyout_contents {
 	z-index:901;
 	width:105%;
 	margin:0 -2.5%;
+	background-color: #000;
 }
 nav.main-navigation ul.main_menu_content li.single_nav_item:hover ul.flyout_contents {
 	display:block;
