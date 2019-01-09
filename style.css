@@ -415,6 +415,7 @@ nav.main-navigation ul.main_menu_content {
 	width:100%;
 	margin:0;
 	position:relative;
+	background-color: #057fd0;
 }
 nav.main-navigation ul.main_menu_content li.single_nav_item  {
     list-style-type:none;
