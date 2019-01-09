@@ -104,9 +104,6 @@
 												foreach ( $parent_pages_copy as $parent_page_copy ) {
 													$item_link = get_permalink($parent_page_copy);
 													$item_title = $parent_page_copy->post_title;
-																		
-					
-					
 													$page_copy = $parent_pages_copy[$count_copy]; 
 													$pageId_copy = $page_copy->ID;
 													$args = array( 'post_type'=> 'page', 
@@ -117,27 +114,18 @@
 																//'sort_order' => 'ASC', 
 																'orderby' => 'menu_order'
 																//'output_key'=> 'date'
-													);
+																);
 													$all_pages_copy = get_pages( $args );
-													
-						$child_pages_copy = get_page_children($parent_page_copy->ID,  $all_pages_copy );
-												
-	
+													$child_pages_copy = get_page_children($parent_page_copy->ID,  $all_pages_copy );
 													$noOfChildren = count($child_pages_copy);
 													
-													echo '<li class="flyout_item">';
-														/*
-														if ($noOfChildren > 0){
-															echo '<span class="menu_has_child">';
-															echo $parent_page_copy->post_title;
-															echo '</span>';
-														}
-														else {
-															echo '<a href="' . $item_link . '" title="'. $item_title .'">';
-															echo $parent_page_copy->post_title;
-															echo '</a>';
-														}
-														*/
+													if ($count_copy % 3 == 0 and count($parent_pages_copy) > 5){
+														echo '<div class="flyout_newrow"></div>';
+													}
+													/* Add the menu items */
+
+													
+														echo '<li class="flyout_item">';
 														echo '<a href="' . $item_link . '" title="'. $item_title .'">';
 														echo $parent_page_copy->post_title;
 														echo '</a>';
@@ -146,7 +134,23 @@
 														echo $parent_page_copy->post_excerpt;
 														echo '</p>';
 
-														
+														echo '</li>';
+
+													// 	if ($count_copy % 3 == 0){
+													// 	echo '</div>';
+													// }
+													$count_copy++;
+												}
+											echo '</ul>';	
+											
+																												/*
+									
+														else {
+															echo '<a href="' . $item_link . '" title="'. $item_title .'">';
+															echo $parent_page_copy->post_title;
+															echo '</a>';
+														}
+														*/
 														
 														//$child_pages_copy = get_page_children($parent_page_copy->ID,  $all_pages_copy );
 														/*
@@ -160,12 +164,7 @@
 														}
 														*/
 														
-													echo '</li>';
-	
-													$count_copy++;
-												}
-											echo '</ul>';	
-											
+
 											
 										//echo '</div>';	
 											

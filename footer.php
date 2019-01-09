@@ -168,7 +168,7 @@
 	$(document).ready( function() {
 		var nav_item = $("li.single_nav_item");
 		nav_item.mouseenter(function(){
-			if ($("li.flyout_item").is(":visible")) {
+			if ($("li.flyout_item").is(":visible") || $("li.flyout_item_narrow").is(":visible")) {
 				var dynamicHeight = $(this).find("ul.flyout_contents").height();
 				var flyout_menu = $(".flyout_menu");
 				
