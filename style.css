@@ -529,6 +529,7 @@ nav.main-navigation ul.main_menu_content li.single_nav_item ul.flyout_contents l
 	display:block;
 	margin-bottom:10px;
 	padding:0;
+	width: 100%;
 } 
 nav.main-navigation ul.main_menu_content li.single_nav_item ul.flyout_contents li a:hover { 
 	text-decoration:underline;
