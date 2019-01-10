@@ -2134,20 +2134,32 @@ ul#serviceIcon_blurbs li img {
 
 div#services {
 	display: flex;
-	flex-direction: column;
+	/* flex-direction: column; */
+	flex-wrap: wrap;
 }
 
 div#service_logo {
 	margin: 1.5rem 2% 0% 2%;
+	align-content: center;
+	text-align: center;
+}
+
+div#service_logo img {
+	all: unset;
+	object-fit: fill;
 }
 
 div#service_body {
-	width: 75%;
+	align-content: center;
+	padding: 0% 10% 0% 10%;
 }
 
 div#service_blurb {
 	display: flex;
-	margin-bottom: 5%;
+	flex-direction: column;
+	margin: 5% 2.5% 5% 2.5%;
+	width: 45%;
+	background-color: #f6f6f6;
 }
 
 
@@ -2157,5 +2169,7 @@ div#service_title {
 	font-family: 'Rajdhani', sans-serif;
 	font-size: 1.5rem;
 	text-transform: uppercase;
-	margin-bottom: 0px;
+	margin: 1.0rem 0.0rem 1.0rem 0.0rem;
+	align-content: center;
+	text-align: center;
 }
