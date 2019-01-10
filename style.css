@@ -2175,11 +2175,15 @@ div#service_blurb {
 	margin: 5% 2.5% 5% 2.5%;
 	width: 45%;
 	background-color: #f6f6f6;
+	transition: background-color 2s, box-shadow 1s;
+	-webkit-transition: background-color 2s, box-shadow 1s;  /* Safari */
 }
 
 div#service_blurb:hover {
 	background-color: rgb(253, 250, 243);
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	transition: background-color 4s, box-shadow 2s;
+	-webkit-transition: background-color 4s, box-shadow 2s;  /* Safari */
 }
 
 div#service_title {
