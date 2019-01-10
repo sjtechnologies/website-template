@@ -1879,7 +1879,7 @@ aside.sidebar {
 -----------------------------------------------------------------*/
 @media screen and (max-width: 750px) {
 :root {
-	--siteWidth: 750px;
+	--siteWidth: 749px;
 }
 #recirc_container .recirc_content h3,
 #recirc_container .recirc_content ul li:nth-child(2),
@@ -2187,4 +2187,16 @@ div#service_title {
 	margin: 1.0rem 0.0rem 1.0rem 0.0rem;
 	align-content: center;
 	text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+	div#services {
+		flex-direction: column; 
+	}
+
+	div#service_blurb {
+		width: 95%;
+	}
+	
+	
 }
