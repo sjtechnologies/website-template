@@ -36,7 +36,7 @@
 					<div id="site-header-menu" class="site-header-menu">
 						<div class="site-branding">
 							<!--<?php twentysixteen_the_custom_logo(); ?>-->
-							<a href="https://sjtechcorp.com" rel="home" itemprop="url" data-slimstat="5">
+							<a href="<?php echo get_site_url(); ?>" rel="home" itemprop="url" data-slimstat="5">
 								<img src="https://sjtechcorp.com/wp-content/uploads/2018/08/logo2x.png" alt="SJTechnologies" />
 							</a>
 							

@@ -39,7 +39,7 @@ get_header(); ?>
 			<?php
 			// Start the loop.
 			while ( have_posts() ) : the_post();
-
+	
 				/*
 				 * Include the Post-Format-specific template for the content.
 				 * If you want to override this in a child theme, then include a file

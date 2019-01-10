@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying the front page!
+ * Template name: Front Page
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages and that
@@ -40,17 +40,26 @@ get_header(); ?>
 		$serviceIcons = new WP_Query( $args );
 		if( $serviceIcons->have_posts() ) :
 		?>
-		  <ul id="serviceIcon_blurbs">
+		  <div id="services">
 			<?php
 			  while( $serviceIcons->have_posts() ) :
 				$serviceIcons->the_post();
 				?>
-				  <li><?php printf( the_content(), the_post_thumbnail() );  ?></li>
+				<div id="service_blurb">	
+						<div id="service_logo">
+							<?php printf( the_post_thumbnail()); ?>
+							
+						</div>
+						<div id="service_body">
+						<div id="service_title"><?php printf(the_title()); ?></div>
+							<?php printf( the_content());  ?>
+						</div>
+				</div>
 				<?php
 			  endwhile;
 			  wp_reset_postdata();
 			?>
-		  </ul>
+		  </div>
 		<?php
 		endif;
 	?>

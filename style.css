@@ -667,37 +667,6 @@ a.social_button {
 }
 /*-------------benefits blurbs ---------*/
 
-ul#serviceIcon_blurbs {
-        max-width:760px;
-        margin:1rem auto;
-		text-align: center;
-}
-
-ul#serviceIcon_blurbs li {
-        list-style-type:none;
-        display:inline-block;
-        width:125px;  
-        margin:20px; 
-        text-align:center;
-}
-ul#serviceIcon_blurbs li p {
-        font-family: 'Poppins', Arial, sans-serif;
-        font-weight:400;
-        font-size:0.875rem;
-        letter-spacing:0.03rem;
-        line-height:1.4rem;
-        margin-bottom:12px;
-        color:#75685e;
-}
-ul#serviceIcon_blurbs + p {
-        max-width:660px;
-        margin:37px auto 0.75rem auto;
-}
-ul#serviceIcon_blurbs li img {
-        max-width:61px;
-        max-height:61px;
-}
-
 
 
 ul#benefits_blurbs {
@@ -2124,4 +2093,69 @@ div.sharedaddy .sd-content ul li {
 	border-color: #007acc;
 	color: #007acc;
 	outline: 0;
+}
+
+
+/* Service Icons */
+
+/* Old Way */
+ul#serviceIcon_blurbs {
+	max-width:760px;
+	margin:1rem auto;
+text-align: center;
+}
+
+ul#serviceIcon_blurbs li {
+	list-style-type:none;
+	display:inline-block;
+	width:125px;  
+	margin:20px; 
+	text-align:center;
+}
+ul#serviceIcon_blurbs li p {
+	font-family: 'Poppins', Arial, sans-serif;
+	font-weight:400;
+	font-size:0.875rem;
+	letter-spacing:0.03rem;
+	line-height:1.4rem;
+	margin-bottom:12px;
+	color:#75685e;
+}
+ul#serviceIcon_blurbs + p {
+	max-width:660px;
+	margin:37px auto 0.75rem auto;
+}
+ul#serviceIcon_blurbs li img {
+	max-width:61px;
+	max-height:61px;
+}
+
+/* Redesign */
+
+div#services {
+	display: flex;
+	flex-direction: column;
+}
+
+div#service_logo {
+	margin: 1.5rem 2% 0% 2%;
+}
+
+div#service_body {
+	width: 75%;
+}
+
+div#service_blurb {
+	display: flex;
+	margin-bottom: 5%;
+}
+
+
+div#service_title {
+	font-weight: bold;
+	color: black;
+	font-family: 'Rajdhani', sans-serif;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	margin-bottom: 0px;
 }
