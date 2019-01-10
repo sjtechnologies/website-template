@@ -2177,6 +2177,9 @@ div#service_blurb {
 	background-color: #f6f6f6;
 }
 
+div#service_blurb:hover {
+	background-color: rgb(253, 250, 243);
+}
 
 div#service_title {
 	font-weight: bold;
