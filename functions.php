@@ -164,8 +164,6 @@ function custom_taxonomy_whitepaper_topic() {
 add_action( 'init', 'custom_taxonomy_whitepaper_topic', 0 );
 
 
-
-
 /*-----------Create Whitepapers custom post type------------*/
 // Register Custom Post Type
 function custom_post_type_benefits() {
@@ -279,7 +277,7 @@ add_action( 'init', 'custom_post_type_serviceIcons' );
 
 add_post_type_support( 'page', 'excerpt' );
 
-
+add_post_type_support( 'whitepapers', 'excerpt' );
 
 
 
