@@ -9,29 +9,7 @@
  * @since Twenty Sixteen 1.0
  */
 ?>
-			<div class="container">
-            <script src='https://www.google.com/recaptcha/api.js'></script>
-            <div class="form-container">
-                <h1>
-                    Contact Us
-                </h1>
-                <form method="post" id="reused_form" >
-                    <label for="name">Your Name:</label>
-                    <input id="name" type="text" name="Name" required maxlength="50">
-                    <label for="email">Email Address:</label>
-                    <input id="email" type="email" name="Email" required maxlength="50">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="Message" rows="10" maxlength="6000" required></textarea>
-                    <div class="g-recaptcha" data-sitekey="6LdVBYkUAAAAABcnUBUDuwi38w3e9v8-UUts72Fd"></div>
-                    <button class="button-primary" type="submit" >Post</button>
-                </form>
-                <div id="success_message" style="display:none">
-                    <h3>Submitted the form successfully!</h3> 
-                    <p> We will get back to you soon. </p>
-                </div>
-                <div id="error_message" style="width:100%; height:100%; display:none; "> <h3>Error</h3> Sorry there was an error sending your form. </div>
-            </div>
-        </div>
+
 		</div><!-- .site-content -->
 
 		<footer id="colophon" class="site-footer" role="contentinfo">
