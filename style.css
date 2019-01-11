@@ -2276,6 +2276,39 @@ div#content-area-case-study {
 	width: 90%;
 }
 
+
+@media screen and (max-width: 750px) {
+	div#case_blurb {
+		flex-direction: column; 
+		flex-wrap: nowrap;
+	}
+
+	div#case_burb {
+		width: 95%;
+	}
+	
+	div#case_logo {
+		border-width: 10px 0px 10px 0px;
+		margin: 0%;
+		width: 100%;
+		height: 250px;
+	}
+	
+	div#case_logo img {
+		all: unset;
+		object-fit: fill;
+		height: 200px;
+	}
+
+	div#case_body {
+		width: 100%;
+		padding: 5%;
+	}
+	div#case_title {
+		margin: 1.0rem 0.0rem 2.0rem 0.0rem;
+	}
+}
+
 /* Bullets for block  mode */
 
 ul.formatted_list {
