@@ -2271,3 +2271,7 @@ div#case_title {
 	align-content: center;
 	text-align: center;
 }
+
+div#content-area-case-study {
+	width: 90%;
+}
