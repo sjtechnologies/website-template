@@ -25,7 +25,7 @@
 							'link_before'    => '<span class="screen-reader-text">',
 							'link_after'     => '</span>',
 						) );
-					?>
+					?> 
 				</nav><!-- .social-navigation -->
 			<?php endif; ?>
 
