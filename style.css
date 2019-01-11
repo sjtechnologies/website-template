@@ -2287,6 +2287,8 @@ ul {
 	line-height: 2.2rem;
 	letter-spacing: 0.025rem;
 	margin: 0 0 2.75rem 0;
+	background:#f6f6f6;
+	padding:1.6rem 2.4rem 0.5rem 3.1rem;
 }
 ul li:before {
 	content: "•";
