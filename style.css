@@ -2197,6 +2197,16 @@ div#service_title {
 	text-align: center;
 }
 
+div#service_blurb_wide {
+	display: flex;
+	flex-direction: column;
+	margin: 5% 2.5% 5% 2.5%;
+	width: 95%;
+	background-color: #f6f6f6;
+	transition: background-color 2s, box-shadow 1s;
+	-webkit-transition: background-color 2s, box-shadow 1s;  /* Safari */
+}
+
 @media screen and (max-width: 750px) {
 	div#services {
 		flex-direction: column; 
