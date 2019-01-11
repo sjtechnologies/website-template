@@ -26,22 +26,8 @@ $title = get_the_title($pageID);
 	
 
 	<div class="entry-content">
-		<?php 
-			$content = get_the_content(); 
-			echo '<p>' . mb_strimwidth($content, 0, 600, '...') . '</p>';
-	
-			/* translators: %s: Name of current post 
-			the_content( sprintf(
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
-				get_the_title()
-			) );
-			*/
-			
-			
-			
-			
-			
-			
+		<?php
+			the_content();
 
 			wp_link_pages( array(
 				'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentysixteen' ) . '</span>',
@@ -51,6 +37,10 @@ $title = get_the_title($pageID);
 				'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentysixteen' ) . ' </span>%',
 				'separator'   => '<span class="screen-reader-text">, </span>',
 			) );
+
+			if ( '' !== get_the_author_meta( 'description' ) ) {
+				get_template_part( 'template-parts/biography' );
+			}
 		?>
 	</div><!-- .entry-content -->
 
