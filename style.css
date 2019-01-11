@@ -2275,3 +2275,36 @@ div#case_title {
 div#content-area-case-study {
 	width: 90%;
 }
+
+/* Bullets for block  mode */
+
+ul {
+	list-style-type:none;
+}
+ul li:before {
+	content: "•";
+	color: var(--accentColor);
+	font-size:1.75rem;
+	position:relative;
+	top:4px;
+	padding:0 6px 0 0;
+}
+ul li {
+	margin-bottom:8px;
+	text-indent:-14px;
+	font-weight:400;
+	font-size:1rem;
+	letter-spacing:0.025rem;
+	line-height:2rem;
+}
+ ul li:last-child {
+	margin-bottom:20px;
+}
+ul li ul {
+	padding:0.8rem 2rem 0 2rem !important;
+}
+ul li ul li:last-child {
+	margin:0 0 -14px -14px;
+	padding:0;
+}
+
