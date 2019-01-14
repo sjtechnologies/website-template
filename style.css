@@ -2358,4 +2358,6 @@ div#boxed_content {
 
 div#boxed_half {
 	width: 49%;
+	align-content: center;
+	text-align: center;
 }
