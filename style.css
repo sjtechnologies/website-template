@@ -2356,7 +2356,7 @@ div#boxed_content {
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
-	margin: 0rem 0rem 5rem 0rem;
+	margin: 0rem 0rem 1rem 0rem;
 	padding: 1.5rem 1.5rem 1.5rem 1.5rem;
 }
 
@@ -2367,7 +2367,7 @@ div#boxed_content2 {
 	align-items: center;
 	justify-content: center;
 	background-color: #f6f6f6;
-	margin: 0rem 0rem 5rem 0rem;
+	margin: 0rem 0rem 1rem 0rem;
 	padding: 1.5rem 1.5rem 1.5rem 1.5rem;
 }
  
@@ -2392,6 +2392,7 @@ div#boxed_half_text {
 @media screen and (max-width: 750px) {
 	div#boxed_content {
 		flex-direction: column; 
+
 	}
 
 	div#boxed_half {
