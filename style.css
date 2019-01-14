@@ -2350,3 +2350,12 @@ ul.formatted_list li ul li:last-child {
 	padding:0;
 }
 
+div#boxed_content {
+	display: flex;
+	/* flex-direction: column; */
+	flex-wrap: wrap;
+}
+
+div#boxed_half {
+	width: 49%;
+}
