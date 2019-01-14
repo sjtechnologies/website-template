@@ -2399,6 +2399,9 @@ div#boxed_half_text {
 		width: 95%;
 	}	
 
+	div#boxed_half img {
+		display: none;
+	}
 	div#boxed_half_text {
 		width: 95%;
 	}	
