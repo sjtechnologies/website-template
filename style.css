@@ -2356,6 +2356,8 @@ div#boxed_content {
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
+	margin: 0rem 0rem 5rem 0rem;
+	padding: 3rem 3rem 3rem 3rem;
 }
 
 div#boxed_content2 {
@@ -2366,7 +2368,7 @@ div#boxed_content2 {
 	justify-content: center;
 	background-color: #f6f6f6;
 	margin: 0rem 0rem 5rem 0rem;
-	padding: 3rem 0rem 3rem 0rem;
+	padding: 3rem 3rem 3rem 3rem;
 }
  
 div#boxed_half {
