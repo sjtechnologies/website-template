@@ -2375,6 +2375,10 @@ div#boxed_half {
 	justify-content: center;
 }
 
+div#boxed_half img {
+	object-fit: cover;
+}
+
 div#boxed_half_text {
 	width: 49%;
 	align-content: center;
