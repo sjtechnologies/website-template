@@ -2354,10 +2354,12 @@ div#boxed_content {
 	display: flex;
 	/* flex-direction: column; */
 	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
 }
 
 div#boxed_half {
 	width: 49%;
 	align-content: center;
-	text-align: center;
+	justify-content: center;
 }
