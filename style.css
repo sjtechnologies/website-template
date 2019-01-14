@@ -2363,3 +2363,11 @@ div#boxed_half {
 	align-content: center;
 	justify-content: center;
 }
+
+div#boxed_half_text {
+	width: 49%;
+	align-content: center;
+	justify-content: center;
+	margin: 0% 2% 0% 2%;
+}
+
