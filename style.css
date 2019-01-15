@@ -481,6 +481,8 @@ nav.main-navigation ul.main_menu_content li.active > a:before {
 	padding:50px 20px;
 	z-index:900;
 	display:none;
+	transition: display 1s;
+	-webkit-transition: display 1s;  /* Safari */
 }
 @media only screen and (min-width: 1130px) {
 .flyout_menu {
