@@ -781,15 +781,17 @@ aside.sidebar p {
 .recirc_content .fixed_image_container {
 	/* background:#a8a09a; */
 	text-align:center;
-	max-height:132px;
+	max-height:112px;
+	object-fit: fill;
 }
 .recirc_content .fixed_image_container {
 	padding:16px;
 }
 .recirc_content .image_container img {
 	height:100%;
-	max-height:132px;
-	width:auto;
+	max-height:112px;
+	max-width:230px;
+	object-fit: fill;
 }
 .recirc_content .fixed_image_container img {
 	height:100px;
