@@ -70,7 +70,7 @@ get_header(); ?>
 	<!-- make dynamic -->
 	<div id="recirc_container">
 		<div class="recirc_content">
-			<h3>Blog</h3>
+			<h3>Resources</h3>
 			<ul>
 				<?php
 					//get the top/highest 2 white papers
