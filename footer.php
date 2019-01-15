@@ -34,9 +34,10 @@
 					<div class="footer_grouping">
 						<ul>
 							<li>Why SJ Technologies</li>
+
 							<li>
 								<?php 
-									$page = get_post(135);
+									$page = get_post(117);
 									$page_title = $page->post_title; 
 									$link = get_page_link($page);
 									echo '<a href="' . $link . '" title="' . $page_title . '">' . $page_title . '</a>';
