@@ -2358,6 +2358,8 @@ div#boxed_content {
 	justify-content: center;
 	margin: 0rem 0rem 1rem 0rem;
 	padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+	transition: background-color 2s, box-shadow 1s;
+	-webkit-transition: background-color 2s, box-shadow 1s;  /* Safari */
 }
 
 div#boxed_content2 {
@@ -2369,8 +2371,24 @@ div#boxed_content2 {
 	background-color: #f6f6f6;
 	margin: 0rem 0rem 1rem 0rem;
 	padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+	transition: background-color 2s, box-shadow 1s;
+	-webkit-transition: background-color 2s, box-shadow 1s;  /* Safari */
 }
- 
+
+div#boxed_content:hover {
+	background-color: rgb(255, 254, 251);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	transition: background-color 4s, box-shadow 2s;
+	-webkit-transition: background-color 4s, box-shadow 2s;  /* Safari */
+}
+
+div#boxed_content2:hover {
+	background-color: rgba(253, 250, 243, 0.925);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	transition: background-color 4s, box-shadow 2s;
+	-webkit-transition: background-color 4s, box-shadow 2s;  /* Safari */
+}
+
 div#boxed_half {
 	width: 49%;
 	align-content: center;
