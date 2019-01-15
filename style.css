@@ -2424,3 +2424,7 @@ div#boxed_half_text {
 		width: 95%;
 	}	
 }
+
+form textarea { 
+	height: 200px;
+}
