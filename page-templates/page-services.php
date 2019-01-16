@@ -1,6 +1,6 @@
 <?php
 /**
- * Template name: Front Page
+ * Template name: Services
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages and that
@@ -38,6 +38,7 @@ get_header(); ?>
 		 );
  
 		$serviceIcons = new WP_Query( $args );
+		$serviceCount = 0;
 		if( $serviceIcons->have_posts() ) :
 		?>
 		  <div id="services">
@@ -45,17 +46,25 @@ get_header(); ?>
 			  while( $serviceIcons->have_posts() ) :
 				$serviceIcons->the_post();
 				?>
-				<div id="service_blurb">	
-						<div id="service_logo">
-							<?php printf( the_post_thumbnail()); ?>
-							
+				<div id="service<?php echo $serviceCount%2; ?>">
+						<div id="service_blurb">	
+							<div id="service_logo">
+								<?php printf( the_post_thumbnail()); ?>
+							</div>
+							<div id="service_body">
+								<div id="service_title">
+									<?php printf(the_title()); ?>
+								</div>
+								<?php printf( the_content());  ?>
+							</div>
 						</div>
-						<div id="service_body">
-						<div id="service_title"><?php printf(the_title()); ?></div>
-							<?php printf( the_content());  ?>
-						</div>
+					<div id="service_meta_image">
+						<?php $image = get_field('meta_image'); ?>
+						<img src="<?php echo $image; ?>"/>
+					</div>
 				</div>
 				<?php
+				$serviceCount++;
 			  endwhile;
 			  wp_reset_postdata();
 			?>

@@ -2173,17 +2173,30 @@ div#service_body {
 	padding: 0% 10% 0% 10%;
 }
 
-div#service_blurb {
+div#service0,div#service1 {
 	display: flex;
-	flex-direction: column;
-	margin: 5% 2.5% 5% 2.5%;
-	width: 45%;
+	flex-wrap: wrap;
+	margin: 1% .5% 1% .5%;
 	background-color: #f6f6f6;
 	transition: background-color 2s, box-shadow 1s;
 	-webkit-transition: background-color 2s, box-shadow 1s;  /* Safari */
 }
 
-div#service_blurb:hover {
+div#service0 {
+	flex-direction: row;
+}
+
+div#service1 {
+	flex-direction: row-reverse;
+}
+
+div#service_blurb {
+	display: flex;
+	flex-direction: column;
+	width: 45%;
+}
+
+div#service0:hover,div#service1:hover {
 	background-color: rgb(253, 250, 243);
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	transition: background-color 4s, box-shadow 2s;
@@ -2201,6 +2214,15 @@ div#service_title {
 	text-align: center;
 }
 
+
+div#service_meta_image {
+	width: 55%;
+}
+
+div#service_meta_image img {
+	object-fit: cover;
+	height: 100%;
+}
 
 @media screen and (max-width: 750px) {
 	div#services {

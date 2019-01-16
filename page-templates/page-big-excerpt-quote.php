@@ -2,7 +2,9 @@
 /**
  * Template name: Big Excerpt Quote
  *
- *
+ * This is used by the front page and other static pages with a large fly in quote at the top.
+ * 
+ * 
  * @package WordPress
  * @subpackage Twenty_Sixteen
  * @since Twenty Sixteen 1.0
