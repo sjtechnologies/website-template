@@ -2233,6 +2233,9 @@ div#service_meta_image img {
 		width: 95%;
 	}
 	
+	div#service_meta_image {
+		display: none;
+	}
 	
 }
 
