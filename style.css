@@ -858,6 +858,19 @@ visibility: visible;
 	animation: moduleZoom ease-in-out 0.75s both;
 	z-index:500;
 }
+
+/* #homepage_module:before {
+	background-color: rgba(36, 16, 6, 0.5);
+	content: " ";
+  z-index: 10;
+  display: block;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+} */
+
 @-webkit-keyframes moduleZoom {
     translate: translate(10px);
     0% {height:100%; top:-20%; opacity:0;}
@@ -2378,8 +2391,7 @@ ul.formatted_list li ul li:last-child {
 	margin:0 0 -14px -14px;
 	padding:0;
 }
-
-div#boxed_content {
+div#boxed_resources_content, div#boxed_content {
 	display: flex;
 	/* flex-direction: column; */
 	flex-wrap: wrap;
@@ -2389,6 +2401,34 @@ div#boxed_content {
 	padding: 1.5rem 1.5rem 1.5rem 1.5rem;
 	transition: background-color 2s, box-shadow 1s;
 	-webkit-transition: background-color 2s, box-shadow 1s;  /* Safari */
+}
+
+div#boxed_resources_content {
+	margin: 0px 0px 4rem 0px;
+	padding: 0px;
+}
+
+div#boxed_resources_content div#boxed_half {
+	margin: 0rem 0rem 1rem 0rem;
+	padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+div#boxed_resources_content .entry-content {
+	margin: 0rem 0rem 1rem 0rem;
+	padding: 1.5rem 4rem 1.5rem 4rem;
+}
+
+div#header_box_bar{
+	width: 100%;
+	font-weight: bold;
+	color:white;
+	font-family: 'Rajdhani', sans-serif;
+	font-size: .5rem;
+	text-transform: uppercase;
+	align-content: center;
+	text-align: center;
+	background-color: #584940; 
+	margin: 1rem 0rem 0rem 0rem;
 }
 
 div#boxed_content2 {
@@ -2403,8 +2443,7 @@ div#boxed_content2 {
 	transition: background-color 2s, box-shadow 1s;
 	-webkit-transition: background-color 2s, box-shadow 1s;  /* Safari */
 }
-
-div#boxed_content:hover {
+div#boxed_resources_content,div#boxed_content:hover {
 	background-color: rgb(255, 254, 251);
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	transition: background-color 4s, box-shadow 2s;
@@ -2422,6 +2461,17 @@ div#boxed_half {
 	width: 49%;
 	align-content: center;
 	justify-content: center;
+}
+
+div#boxed_half h1 {
+	font-family: 'Rajdhani', sans-serif;
+	color:#584940;
+	letter-spacing:0.1rem;
+	font-size: 2vw;
+	text-transform:uppercase;
+	line-height: 2.5vw;
+	border-bottom: 5px solid #ededed;
+	margin-bottom: 0px;
 }
 
 div#boxed_half img {
