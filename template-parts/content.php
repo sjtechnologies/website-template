@@ -23,7 +23,9 @@
 			<span class="sticky-post"><?php _e( 'Featured', 'twentysixteen' ); ?></span>
 		<?php endif; ?>
 
-		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+		<?php echo '<a href=" ' . get_post_permalink($recent_blog_post) .' ">' ?>
+			<h1><?php the_title(); ?></h1>
+		</a>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

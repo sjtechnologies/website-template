@@ -2547,10 +2547,12 @@ div#resources_container div#boxed_half_wide_box {
 }
 
 div#resources_container h1 {
-	font-size: 1.0rem;
+	font-size: 1rem;
 	line-height: 1.0rem;
 	border: none;
+	word-wrap: initial;
 }
+
 
 div#resources_container article {
 	margin-bottom: 1em;
@@ -2559,6 +2561,7 @@ div#resources_container article {
 .resource_text_container {
 	margin: 0px 1rem 0px 1rem;
 }
+
 
 .entry-content p {
 	font-family: 'Helvetica', 'Arial', sans-serif;
