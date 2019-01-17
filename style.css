@@ -783,6 +783,7 @@ aside.sidebar p {
 	text-align:center;
 	max-height:112px;
 	object-fit: fill;
+	flex: 1;
 	object-position: fill;
 }
 .recirc_content .fixed_image_container {
@@ -793,6 +794,7 @@ aside.sidebar p {
 	max-height:112px;
 	max-width:230px;
 	object-fit: fill;
+	flex: 1;
 	object-position: fill;
 }
 .recirc_content .fixed_image_container img {
@@ -2181,6 +2183,7 @@ div#service_logo {
 div#service_logo img {
 	all: unset;
 	object-fit: fill;
+	flex: 1;
 	object-position: fill;
 }
 
@@ -2237,6 +2240,7 @@ div#service_meta_image {
 
 div#service_meta_image img {
 	object-fit: cover;
+	flex: 1;
 	object-position: cover;
 	height: 100%;
 }
@@ -2343,6 +2347,7 @@ div#content-area-case-study {
 	div#case_logo img {
 		all: unset;
 		object-fit: fill;
+		flex: 1;
 		object-position: fill;
 		height: 200px;
 	}
@@ -2481,6 +2486,7 @@ div#boxed_half h1 {
 
 div#boxed_half img {
 	object-fit: cover;
+	flex: 1;
 	object-position: cover;
 }
 
@@ -2583,6 +2589,7 @@ div#resources_container .image_container img {
 	text-align: center;
 	height: 125px;
 	object-fit: cover;
+	flex: 1;
 	object-position: cover;
 }
 
