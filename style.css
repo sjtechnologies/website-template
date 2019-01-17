@@ -2502,7 +2502,6 @@ div#boxed_half_text {
 @media screen and (max-width: 750px) {
 	div#boxed_content {
 		flex-direction: column; 
-
 	}
 
 	div#boxed_half {

@@ -54,26 +54,21 @@
 		?>
 	</div><!-- .entry-content -->
 	</div><!-- boxed_resources_conntent -->
-	<footer class="entry-footer">
-		<?php
-			edit_post_link(
-				sprintf(
-					/* translators: %s: Name of current post */
-					__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
-					get_the_title()
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
+	<div id="boxed_content">
+	<div id="boxed_half_text">
+			<h2>Contact Us</h2>
+			<p style="text-align: center;">We know every project is unique.
+					Let us know how we can help.
+			<h2>800-574-4518</h2>
+			<p style="text-align: center;"><img style="margin-left: -25px;" src="http://localhost:8080/wp-content/uploads/2019/01/smartphone.png" width="100px"></p>
+	</div>
+	<div>
+		<?php echo do_shortcode('[contact-form-7 id="312" title="Contact Us"]'); ?> 
+	</div>
+</div>
 
-		?>
-	</footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->
-
-<div>
-<!-- <?php echo do_shortcode('[contact-form-7 id="312" title="Contact Us"]'); ?> -->
-</div>
 
 <div id="recirc_container">
 		<div class="recirc_content">
