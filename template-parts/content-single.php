@@ -54,6 +54,8 @@
 		?>
 	</div><!-- .entry-content -->
 	</div><!-- boxed_resources_conntent -->
+	
+	<!-- contact us form -->
 	<div id="boxed_content">
 	<div id="boxed_half_text">
 			<h2>Contact Us</h2>
@@ -66,7 +68,7 @@
 		<?php echo do_shortcode('[contact-form-7 id="312" title="Contact Us"]'); ?> 
 	</div>
 </div>
-
+<!-- end contact us -->
 
 </article><!-- #post-## -->
 
