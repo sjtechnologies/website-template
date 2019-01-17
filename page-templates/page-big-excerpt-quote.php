@@ -32,7 +32,8 @@ get_header(); ?>
 	
 	
 
-
+	<?php get_template_part('contactform'); ?>  
+	
 	
 	<!-- make dynamic -->
 	<div id="recirc_container">
