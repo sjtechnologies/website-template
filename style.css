@@ -2496,7 +2496,7 @@ div#resource:hover {
 	-webkit-transition: background-color 4s, box-shadow 2s;  /* Safari */
 }
 
-div#boxed_half h1, div#resource h1 {
+div#resource h1 {
 	font-family: 'Rajdhani', sans-serif;
 	color:#584940;
 	letter-spacing:0.1rem;
@@ -2505,6 +2505,22 @@ div#boxed_half h1, div#resource h1 {
 	line-height: 2.5vw;
 	border-bottom: 5px solid #ededed;
 	margin-bottom: 0px;
+}
+
+div#boxed_half h1 {
+	font-family: 'Rajdhani', sans-serif;
+	color:#584940;
+	letter-spacing:0.1rem;
+	font-size: 2vw;
+	text-transform:uppercase;
+	line-height: 2.5vw;
+	margin-bottom: 0px;
+}
+
+div#boxed_half.resource_title_box {
+	align-content: center;
+	justify-content: center;
+	padding-left: 4rem;
 }
 
 div#boxed_half img, div#resource img {

@@ -20,7 +20,7 @@
 	         
 <div id="boxed_resources_content">
 
-		<div id="boxed_half" class="boxed_border_left">
+		<div id="boxed_half" class="resource_title_box">
 		<?php
 	
 		echo '<h1>' . $title . '</h1>';
