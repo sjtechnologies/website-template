@@ -2576,6 +2576,12 @@ div#resources_container div#resource {
 	flex-direction: column;
 }
 
+@media screen and (max-width: 750px) {
+	div#resources_container div#resource {
+		width: 46%;
+	}
+}
+
 div#resources_container div#boxed_resource_wide_box {
 	width: 46%;
 	margin: 1%;
