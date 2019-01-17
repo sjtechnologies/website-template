@@ -2499,6 +2499,24 @@ div#boxed_half_text {
 	padding: 0% 2% 0% 2%;
 }
 
+@media screen and (max-width: 750px) {
+	div#boxed_content {
+		flex-direction: column; 
+
+	}
+
+	div#boxed_half {
+		width: 95%;
+	}	
+
+	div#boxed_half img {
+		display: none;
+	}
+	div#boxed_half_text {
+		width: 95%;
+	}	
+}
+
 div#resource {
 	width: 49%;
 	align-content: center;
