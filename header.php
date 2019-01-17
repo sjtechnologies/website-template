@@ -80,8 +80,8 @@
 										$ancestors = get_post_ancestors();
 										$grandparent_of_current_ID = $ancestors[1];
 										$grandparent_title = get_the_title($grandparent_of_current_ID);
-										$home_page = get_site_url() . '/';
-										
+										$obj_id = get_queried_object_id();
+										$current_url = get_permalink( $obj_id );
 										
 										if (is_singular('post') and $i == 2 || $page_title == $grandparent_title || $page_title ==  $current_title || $page_title ==  $parent_current_title) {
 											echo '<li class="single_nav_item active">';
@@ -90,7 +90,7 @@
 											echo '<li class="single_nav_item">';
 										}										
 										$i++;
-										if ($page_link === $home_page) {
+										if ($page_link === $current_url) {
 											echo '<a href="#">' . $page_title . '</a>';
 										} else {
 											echo '<a href="' . $page_link .'" title="' . $page_title . '">' . $page_title . '</a>';		
