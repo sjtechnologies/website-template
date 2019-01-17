@@ -11,7 +11,7 @@
 ?>
 
 <!-- <div id="boxed_half<?php if (($postCounter % 5) == 0) echo '_wide_box'; ?>"> -->
-<div id="boxed_half">
+<div id="resource">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="image_container">
 	<?php echo '<a href=" ' . get_post_permalink($recent_blog_post) .' ">' ?>
