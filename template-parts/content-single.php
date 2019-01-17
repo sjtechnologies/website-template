@@ -71,6 +71,10 @@
 
 </article><!-- #post-## -->
 
+<div>
+<!-- <?php echo do_shortcode('[contact-form-7 id="312" title="Contact Us"]'); ?> -->
+</div>
+
 <div id="recirc_container">
 		<div class="recirc_content">
 			<h3>More Resources</h3>

@@ -2469,6 +2469,18 @@ div#boxed_content2:hover {
 	-webkit-transition: background-color 4s, box-shadow 2s;  /* Safari */
 }
 
+div#boxed_half {
+	width: 49%;
+	align-content: center;
+	justify-content: center;
+}
+
+div#boxed_half_text {
+	width: 49%;
+	align-content: center;
+	justify-content: center;
+}
+
 div#resource {
 	width: 49%;
 	align-content: center;
@@ -2484,7 +2496,7 @@ div#resource:hover {
 	-webkit-transition: background-color 4s, box-shadow 2s;  /* Safari */
 }
 
-div#resource h1 {
+div#boxed_half h1, div#resource h1 {
 	font-family: 'Rajdhani', sans-serif;
 	color:#584940;
 	letter-spacing:0.1rem;
@@ -2495,7 +2507,7 @@ div#resource h1 {
 	margin-bottom: 0px;
 }
 
-div#resource img {
+div#boxed_half img, div#resource img {
 	object-fit: cover;
 	flex: 1;
 	object-position: cover;
