@@ -2236,6 +2236,7 @@ div#service_title {
 
 div#service_meta_image {
 	width: 55%;
+	flex: 1;
 }
 
 div#service_meta_image img {
@@ -2243,6 +2244,7 @@ div#service_meta_image img {
 	flex: 1;
 	object-position: cover;
 	height: 100%;
+	width: 100%;
 }
 
 @media screen and (max-width: 750px) {
