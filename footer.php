@@ -52,6 +52,9 @@
 								?>
 							</li>
 							<li>
+							<a href="https://sjnp.sjtechcorp.com/techblog/">Resources</a>
+						  </li>
+							<li>
 								<?php 
 									$page = get_post(321);
 									$page_title = $page->post_title; 
@@ -100,7 +103,7 @@
 					-->
 					<div class="footer_grouping">
 					<ul>
-							<li>Contracts &amp; Certifications</li>
+							<li>Vehicles &amp; Certifications</li>
 							<li>
 								<?php 
 									$page = get_post(121);
