@@ -214,8 +214,10 @@
 						<a target="_blank" class="social_button linkedin" href="https://www.linkedin.com/company/sj-technologies" title="Visit us on LinkedIn"></a>
 						<a target="_blank" class="social_button facebook" href="https://www.facebook.com/sjtechnologies/" title="Visit us on Facebook"></a>
 						<a target="_blank" class="social_button twitter" href="https://twitter.com/sjtechcorp?lang=en" title="Visit us on Twitter"></a>
+				<!-- Deleting social media icons
 						<a target="_blank" class="social_button instagram" href="https://www.instagram.com/sjtechnologies/" title="Visit us on Instagram"></a>
 						<a target="_blank" class="social_button youtube" href="https://www.youtube.com/channel/UCEgNyV70yJgyM2P5l0CEZ9Q" title="Visit us on Youtube"></a>
+						-->
 					</div>
 				<?php endif; ?>
 			</div><!-- .site-header-main -->
