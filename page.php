@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying pages
+ * The template for displaying the front page!
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages and that
@@ -70,7 +70,7 @@ get_header(); ?>
 	<!-- make dynamic -->
 	<div id="recirc_container">
 		<div class="recirc_content">
-			<h3>Blog</h3>
+			<h3>Resources</h3>
 			<ul>
 				<?php
 					//get the top/highest 2 white papers

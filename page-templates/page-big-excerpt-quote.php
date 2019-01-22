@@ -1,59 +1,38 @@
-<?php /* Template Name: big-benefits */ ?>
 <?php
 /**
- * The template for displaying pages
+ * Template name: Big Excerpt Quote
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages and that
- * other "pages" on your WordPress site will use a different template.
- *
+ * This is used by the front page and other static pages with a large fly in quote at the top.
+ * 
+ * 
  * @package WordPress
  * @subpackage Twenty_Sixteen
  * @since Twenty Sixteen 1.0
  */
 
 get_header(); ?>
+<!-- BIG TEST -->
 
-
-		<h2>Big Benefits</h2>
-  	<!-- add benefit  blurbs -->
-  	<?php
-		$args = array(
-		  'post_type'   => 'benefits',
-		  'post_status' => 'publish',
-		  'orderby' => 'menu_order', 
-           'order' => 'ASC', 
-  
-		 );
- 
-		$benefits = new WP_Query( $args );
-		if( $benefits->have_posts() ) :
-		?>
-		  <ul id="benefits_blurbs">
-			<?php
-			  while( $benefits->have_posts() ) :
-				$benefits->the_post();
-				?>
-				  <li><?php printf( the_content(), the_post_thumbnail() );  ?></li>
-				<?php
-			  endwhile;
-			  wp_reset_postdata();
-			?>
-		  </ul>
+	<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
+	         
+	<div id="homepage_module" style="background-image: url('<?php echo $backgroundImg[0]; ?>');">
 		<?php
-		endif;
-	?>
+			while ( have_posts() ) : the_post();
+				the_excerpt();
+			endwhile;
+		?>
 
-
-  	<!-- add main paragraph -->
- 	<?php
+	</div>  
+	  	<!-- add main paragraph -->
+			<?php
 		while ( have_posts() ) : the_post();
 			the_content();
 		endwhile;
 	?>
 	
 	
-	
+
+	<?php get_template_part('contactform'); ?>  
 	
 	
 	<!-- make dynamic -->

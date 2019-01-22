@@ -1,7 +1,6 @@
-<?php /* Template Name: big-benefits */ ?>
 <?php
 /**
- * The template for displaying pages
+ * Template name: Services
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages and that
@@ -13,33 +12,63 @@
  */
 
 get_header(); ?>
+<!-- BIG TEST -->
 
+	<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
+          
+	<div id="homepage_module" style="background-image: url('<?php echo $backgroundImg[0]; ?>');">
+		<?php
+			while ( have_posts() ) : the_post();
+				the_excerpt();
+			endwhile;
+		?>
 
-		<h2>Big Benefits</h2>
-  	<!-- add benefit  blurbs -->
+	</div>  
+	
+	
+		<h2>Services</h2>
+  	<!-- add serviceIcon blurbs -->
   	<?php
 		$args = array(
-		  'post_type'   => 'benefits',
+		  'post_type'   => 'serviceIcons',
 		  'post_status' => 'publish',
-		  'orderby' => 'menu_order', 
-           'order' => 'ASC', 
+		  'orderby' => 'date', 
+          'order' => 'ASC', 
   
 		 );
  
-		$benefits = new WP_Query( $args );
-		if( $benefits->have_posts() ) :
+		$serviceIcons = new WP_Query( $args );
+		$serviceCount = 0;
+		if( $serviceIcons->have_posts() ) :
 		?>
-		  <ul id="benefits_blurbs">
+		  <div id="services">
 			<?php
-			  while( $benefits->have_posts() ) :
-				$benefits->the_post();
+			  while( $serviceIcons->have_posts() ) :
+				$serviceIcons->the_post();
 				?>
-				  <li><?php printf( the_content(), the_post_thumbnail() );  ?></li>
+				<div id="service<?php echo $serviceCount%2; ?>">
+						<div id="service_blurb">	
+							<div id="service_logo">
+								<?php printf( the_post_thumbnail()); ?>
+							</div>
+							<div id="service_body">
+								<div id="service_title">
+									<?php printf(the_title()); ?>
+								</div>
+								<?php printf( the_content());  ?>
+							</div>
+						</div>
+					<div id="service_meta_image">
+						<?php $image = get_field('meta_image'); ?>
+						<img src="<?php echo $image; ?>"/>
+					</div>
+				</div>
 				<?php
+				$serviceCount++;
 			  endwhile;
 			  wp_reset_postdata();
 			?>
-		  </ul>
+		  </div>
 		<?php
 		endif;
 	?>
@@ -51,9 +80,9 @@ get_header(); ?>
 			the_content();
 		endwhile;
 	?>
-	
-	
-	
+
+<?php get_template_part('contactform'); ?>
+
 	
 	
 	<!-- make dynamic -->

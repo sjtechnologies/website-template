@@ -16,6 +16,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i|Poppins:400,500,600,700|Rajdhani:700" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" >
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="form.css" >
+	<script src="form.js"></script>
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
@@ -36,7 +40,7 @@
 					<div id="site-header-menu" class="site-header-menu">
 						<div class="site-branding">
 							<!--<?php twentysixteen_the_custom_logo(); ?>-->
-							<a href="https://sjtechcorp.com" rel="home" itemprop="url" data-slimstat="5">
+							<a href="<?php echo get_site_url(); ?>" rel="home" itemprop="url" data-slimstat="5">
 								<img src="https://sjtechcorp.com/wp-content/uploads/2018/08/logo2x.png" alt="SJTechnologies" />
 							</a>
 							
@@ -76,8 +80,9 @@
 										$ancestors = get_post_ancestors();
 										$grandparent_of_current_ID = $ancestors[1];
 										$grandparent_title = get_the_title($grandparent_of_current_ID);
+										$obj_id = get_queried_object_id();
+										$current_url = get_permalink( $obj_id );
 										
-				
 										if (is_singular('post') and $i == 2 || $page_title == $grandparent_title || $page_title ==  $current_title || $page_title ==  $parent_current_title) {
 											echo '<li class="single_nav_item active">';
 										}		
@@ -85,9 +90,11 @@
 											echo '<li class="single_nav_item">';
 										}										
 										$i++;
-										
+										if ($page_link === $current_url) {
+											echo '<a href="#">' . $page_title . '</a>';
+										} else {
 											echo '<a href="' . $page_link .'" title="' . $page_title . '">' . $page_title . '</a>';		
-		
+										}
 											//populate flyout panel
 											echo '<ul class="flyout_contents">';
 												$idOfPage = get_post_meta( $navItem->ID, '_menu_item_object_id', true );
@@ -104,9 +111,6 @@
 												foreach ( $parent_pages_copy as $parent_page_copy ) {
 													$item_link = get_permalink($parent_page_copy);
 													$item_title = $parent_page_copy->post_title;
-																		
-					
-					
 													$page_copy = $parent_pages_copy[$count_copy]; 
 													$pageId_copy = $page_copy->ID;
 													$args = array( 'post_type'=> 'page', 
@@ -117,27 +121,18 @@
 																//'sort_order' => 'ASC', 
 																'orderby' => 'menu_order'
 																//'output_key'=> 'date'
-													);
+																);
 													$all_pages_copy = get_pages( $args );
-													
-						$child_pages_copy = get_page_children($parent_page_copy->ID,  $all_pages_copy );
-												
-	
+													$child_pages_copy = get_page_children($parent_page_copy->ID,  $all_pages_copy );
 													$noOfChildren = count($child_pages_copy);
 													
-													echo '<li class="flyout_item">';
-														/*
-														if ($noOfChildren > 0){
-															echo '<span class="menu_has_child">';
-															echo $parent_page_copy->post_title;
-															echo '</span>';
-														}
-														else {
-															echo '<a href="' . $item_link . '" title="'. $item_title .'">';
-															echo $parent_page_copy->post_title;
-															echo '</a>';
-														}
-														*/
+													if ($count_copy % 3 == 0 and count($parent_pages_copy) > 5){
+														echo '<div class="flyout_newrow"></div>';
+													}
+													/* Add the menu items */
+
+													
+														echo '<li class="flyout_item">';
 														echo '<a href="' . $item_link . '" title="'. $item_title .'">';
 														echo $parent_page_copy->post_title;
 														echo '</a>';
@@ -146,7 +141,23 @@
 														echo $parent_page_copy->post_excerpt;
 														echo '</p>';
 
-														
+														echo '</li>';
+
+													// 	if ($count_copy % 3 == 0){
+													// 	echo '</div>';
+													// }
+													$count_copy++;
+												}
+											echo '</ul>';	
+											
+																												/*
+									
+														else {
+															echo '<a href="' . $item_link . '" title="'. $item_title .'">';
+															echo $parent_page_copy->post_title;
+															echo '</a>';
+														}
+														*/
 														
 														//$child_pages_copy = get_page_children($parent_page_copy->ID,  $all_pages_copy );
 														/*
@@ -160,12 +171,7 @@
 														}
 														*/
 														
-													echo '</li>';
-	
-													$count_copy++;
-												}
-											echo '</ul>';	
-											
+
 											
 										//echo '</div>';	
 											
@@ -208,8 +214,10 @@
 						<a target="_blank" class="social_button linkedin" href="https://www.linkedin.com/company/sj-technologies" title="Visit us on LinkedIn"></a>
 						<a target="_blank" class="social_button facebook" href="https://www.facebook.com/sjtechnologies/" title="Visit us on Facebook"></a>
 						<a target="_blank" class="social_button twitter" href="https://twitter.com/sjtechcorp?lang=en" title="Visit us on Twitter"></a>
+				<!-- Deleting social media icons
 						<a target="_blank" class="social_button instagram" href="https://www.instagram.com/sjtechnologies/" title="Visit us on Instagram"></a>
 						<a target="_blank" class="social_button youtube" href="https://www.youtube.com/channel/UCEgNyV70yJgyM2P5l0CEZ9Q" title="Visit us on Youtube"></a>
+						-->
 					</div>
 				<?php endif; ?>
 			</div><!-- .site-header-main -->

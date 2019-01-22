@@ -25,24 +25,19 @@
 							'link_before'    => '<span class="screen-reader-text">',
 							'link_after'     => '</span>',
 						) );
-					?>
+					?> 
 				</nav><!-- .social-navigation -->
 			<?php endif; ?>
 
-			
-			
-			
-			
-			
-			
 			<div id="site_map_container">
 				<div class="site_map_content">
 					<div class="footer_grouping">
 						<ul>
 							<li>Why SJ Technologies</li>
+
 							<li>
 								<?php 
-									$page = get_post(135);
+									$page = get_post(117);
 									$page_title = $page->post_title; 
 									$link = get_page_link($page);
 									echo '<a href="' . $link . '" title="' . $page_title . '">' . $page_title . '</a>';
@@ -50,7 +45,26 @@
 							</li>
 							<li>
 								<?php 
-									$page = get_post(137);
+									$page = get_post(125);
+									$page_title = $page->post_title; 
+									$link = get_page_link($page);
+									echo '<a href="' . $link . '" title="' . $page_title . '">' . $page_title . '</a>';
+								?>
+							</li>
+							<li>
+							<a href="https://sjnp.sjtechcorp.com/techblog/">Resources</a>
+						  </li>
+							<li>
+								<?php 
+									$page = get_post(321);
+									$page_title = $page->post_title; 
+									$link = get_page_link($page);
+									echo '<a href="' . $link . '" title="' . $page_title . '">' . $page_title . '</a>';
+								?>
+							</li>
+							<li>
+								<?php 
+									$page = get_post(263);
 									$page_title = $page->post_title; 
 									$link = get_page_link($page);
 									echo '<a href="' . $link . '" title="' . $page_title . '">' . $page_title . '</a>';
@@ -58,33 +72,7 @@
 							</li>
 						</ul>
 					
-						<ul>
-							<li>Contracts &amp; Certifications</li>
-							<li>
-								<?php 
-									$page = get_post(121);
-									$page_title = $page->post_title; 
-									$link = get_page_link($page);
-									echo '<a href="' . $link . '" title="' . $page_title . '">' . $page_title . '</a>';
-								?>
-							</li>
-							<li>
-								<?php 
-									$page = get_post(140);
-									$page_title = $page->post_title; 
-									$link = get_page_link($page);
-									echo '<a href="' . $link . '" title="' . $page_title . '">' . $page_title . '</a>';
-								?>
-							</li>
-							<li>
-								<?php 
-									$page = get_post(142);
-									$page_title = $page->post_title; 
-									$link = get_page_link($page);
-									echo '<a href="' . $link . '" title="' . $page_title . '">' . $page_title . '</a>';
-								?>
-							</li>
-						</ul>
+						
 					</div>
 					<div class="footer_grouping">
 						<ul>
@@ -114,11 +102,11 @@
 					</div>
 					-->
 					<div class="footer_grouping">
-						<ul>
-							<li>Company</li>
+					<ul>
+							<li>Vehicles &amp; Certifications</li>
 							<li>
 								<?php 
-									$page = get_post(263);
+									$page = get_post(121);
 									$page_title = $page->post_title; 
 									$link = get_page_link($page);
 									echo '<a href="' . $link . '" title="' . $page_title . '">' . $page_title . '</a>';
@@ -126,7 +114,7 @@
 							</li>
 							<li>
 								<?php 
-									$page = get_post(321);
+									$page = get_post(140);
 									$page_title = $page->post_title; 
 									$link = get_page_link($page);
 									echo '<a href="' . $link . '" title="' . $page_title . '">' . $page_title . '</a>';
@@ -134,7 +122,7 @@
 							</li>
 							<li>
 								<?php 
-									$page = get_post(125);
+									$page = get_post(142);
 									$page_title = $page->post_title; 
 									$link = get_page_link($page);
 									echo '<a href="' . $link . '" title="' . $page_title . '">' . $page_title . '</a>';
@@ -148,7 +136,7 @@
 						</div>
 					</div>
 				</div>
-					<p style="text-align:center">&copy; Copyright 2018 by SJ Technologies Inc. All rights reserved.</p>
+					<p style="text-align:center">&copy; Copyright <?php echo date("Y"); ?> by SJ Technologies Inc. All rights reserved.</p>
 			</div>
 			
 			
@@ -168,7 +156,7 @@
 	$(document).ready( function() {
 		var nav_item = $("li.single_nav_item");
 		nav_item.mouseenter(function(){
-			if ($("li.flyout_item").is(":visible")) {
+			if ($("li.flyout_item").is(":visible") || $("li.flyout_item_narrow").is(":visible")) {
 				var dynamicHeight = $(this).find("ul.flyout_contents").height();
 				var flyout_menu = $(".flyout_menu");
 				

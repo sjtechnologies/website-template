@@ -13,14 +13,12 @@ $pageID = get_option('page_for_posts');
 $image = wp_get_attachment_image_src( get_post_thumbnail_id( $pageID ), 'single-post-thumbnail' );$imageURL = $image[0];
 $title = get_the_title($pageID);
 ?>
-<div class="header_art_before"></div>
+<!-- <div class="header_art_before"></div>
 <div class="header_art" style="background-image:url(<?php echo htmlspecialchars($imageURL); ?>);">
 	<h1 class="header-title"><?php echo $title ?></h1>
-</div>
+</div> -->
 
-<div id="primary" class="content-area">
-	<main id="main" class="site-main" role="main">
-		
+
 		
 		<?php
 
@@ -56,11 +54,7 @@ $title = get_the_title($pageID);
 		endwhile;
 		?>
 
-	</main><!-- .site-main -->
 
-	<?php get_sidebar( 'content-bottom' ); ?>
 
-</div><!-- .content-area -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

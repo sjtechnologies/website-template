@@ -1,7 +1,6 @@
-<?php /* Template Name: big-benefits */ ?>
 <?php
 /**
- * The template for displaying pages
+ * Template name: Customer Results
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages and that
@@ -13,48 +12,71 @@
  */
 
 get_header(); ?>
+<!-- BIG TEST -->
 
-
-		<h2>Big Benefits</h2>
-  	<!-- add benefit  blurbs -->
-  	<?php
-		$args = array(
-		  'post_type'   => 'benefits',
-		  'post_status' => 'publish',
-		  'orderby' => 'menu_order', 
-           'order' => 'ASC', 
-  
-		 );
- 
-		$benefits = new WP_Query( $args );
-		if( $benefits->have_posts() ) :
-		?>
-		  <ul id="benefits_blurbs">
-			<?php
-			  while( $benefits->have_posts() ) :
-				$benefits->the_post();
-				?>
-				  <li><?php printf( the_content(), the_post_thumbnail() );  ?></li>
-				<?php
-			  endwhile;
-			  wp_reset_postdata();
-			?>
-		  </ul>
+	<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
+	         
+	<div id="homepage_module" style="background-image: url('<?php echo $backgroundImg[0]; ?>');">
 		<?php
-		endif;
-	?>
+			while ( have_posts() ) : the_post();
+				the_excerpt();
+			endwhile;
+		?>
 
-
-  	<!-- add main paragraph -->
- 	<?php
+	</div>  
+	  	<!-- add main paragraph -->
+			<?php
 		while ( have_posts() ) : the_post();
 			the_content();
 		endwhile;
 	?>
 	
 	
-	
-	
+
+  	<!-- add casestudy blurbs -->
+  	<?php
+		$args = array(
+		  'post_type'   => 'Case Studies',
+		  'post_status' => 'publish',
+		  'orderby' => 'date', 
+          'order' => 'ASC', 
+  
+		 );
+ 
+		$caseStudies = new WP_Query( $args );
+		if( $caseStudies->have_posts() ) :
+		?>
+		  <div id="cases">
+			<?php
+			  while( $caseStudies->have_posts() ) :
+				$caseStudies->the_post();
+				?>
+				<div id="case_blurb">	
+						<div id="case_logo">
+							<?php printf( the_post_thumbnail()); ?>
+							
+						</div>
+						<div id="case_body">
+						<div id="case_title"><?php printf(the_title()); ?></div>
+							<?php printf( the_excerpt());  ?>
+							<p style="text-align: center;">
+								<span class="myprefix-button">
+									<a class="myprefix-button color-green" href="<?php the_permalink();?>">
+										<span>Read the Study</span>
+									</a>
+								</span>
+							</p>
+						</div>
+				</div>
+				<?php
+			  endwhile;
+			  wp_reset_postdata();
+			?>
+		  </div>
+		<?php
+		endif;
+	?>
+
 	
 	<!-- make dynamic -->
 	<div id="recirc_container">
