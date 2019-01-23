@@ -2504,13 +2504,18 @@ div#boxed_half_text {
 		flex-direction: column; 
 	}
 
+	div#boxed_content2 {
+		flex-direction: column-reverse; 
+	}
+
 	div#boxed_half {
 		width: 95%;
 	}	
 
 	div#boxed_half img {
-		display: none;
+		/* display: none; */
 	}
+
 	div#boxed_half_text {
 		width: 95%;
 	}	
