@@ -2587,7 +2587,7 @@ div#boxed_resource_text {
 	}	
 
 	div#resource img {
-		display: none;
+		/* display: none; */
 	}
 	div#boxed_resource_text {
 		width: 95%;
